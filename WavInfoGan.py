@@ -229,7 +229,7 @@ class GAN():
 
 				d_loss = self.criticModel.train_on_batch([selection, noise, salient], [valid, fake, dummy])
 
-			g_loss = self.generatorModel.train_on_batch([noise, salient], [valid, salient])
+				g_loss = self.generatorModel.train_on_batch([noise, salient], [valid, salient])
 
 			print ("%d [D loss: %.2f] [Q loss: %.2f] [G loss: %.2f]" % (epoch, d_loss[0], g_loss[2], g_loss[1]))
 
